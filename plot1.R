@@ -19,7 +19,7 @@ if(!file.exists("./data/hpc_subset.csv")){
 
 hpc_data = read_csv("./data/hpc_subset.csv") %>% mutate(Timepoint = dmy_hms(paste(Date, Time)))
 
-
+par(mfrow = c(1,1))
 hist(hpc_data$Global_active_power, 
      col = "red", 
      main = "Global Active Power",

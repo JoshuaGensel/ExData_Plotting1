@@ -19,6 +19,7 @@ if(!file.exists("./data/hpc_subset.csv")){
 
 hpc_data = read_csv("./data/hpc_subset.csv") %>% mutate(Timepoint = dmy_hms(paste(Date, Time)))
 
+par(mfrow = c(1,1))
 
 plot(hpc_data$Timepoint, hpc_data$Sub_metering_1, 
      type = "n",
